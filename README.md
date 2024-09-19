@@ -1,4 +1,8 @@
 ## Natural Language Processing (NLP)
+**MMAI5400-A2: web scraping reviews**
+- Scraped 500+ reviews from Trustpilot.
+- Written reviews to a CSV file with columns: companyName, datePublished, ratingValue, reviewBody.
+
 **MMAI5400-A2: sentiment prediction for restaurants**
 - Aimed to predict sentiment towards each restaurant based on customer reviews. 
 - Utilize Python for sentiment segmentation and data cleaning.
