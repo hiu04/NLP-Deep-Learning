@@ -27,3 +27,8 @@
 - Inference & Visualization: The trained model is used to make predictions on new images, detecting objects and displaying bounding boxes and labels. A function is also provided to count specific objects in an image.
 
 **A3: Anomaly Detection**
+- Data Preparation: Extracts frames from a video file and stores them as JPEG images. Loads and preprocesses the images for training the anomaly detection model.
+- Model Training: Utilizes a Convolutional Autoencoder architecture for learning normal patterns in the image frames. Trains the autoencoder on the normal image frames to reconstruct them with minimal loss.
+- Anomaly Detection: For each test frame, calculates the reconstruction loss compared to the original frame. Identifies frames with high reconstruction loss as anomalous, indicating they differ significantly from the learned normal patterns.
+- Evaluation: Evaluates the model's performance by detecting anomalous frames in a given video or image set. Outputs the file names of anomalous frames for further analysis.
+- Framework Used: Leverages Keras, a high-level neural networks API built on top of TensorFlow, for building and training the autoencoder model.
