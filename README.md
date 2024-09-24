@@ -13,3 +13,17 @@
 - Aimed to predict sentiment towards dishes based on customer reviews. 
 - Named Entity Recognition (NER) is used to locate the name of the meal.
 - Trained and tuned Aspect Oriented Sentiment Analysis (ABSA) to predict the customer's sentiment and preference for the meal, theryby facilitating the identification of areas for improvement.
+
+
+## Deep Learning
+**A1: Neural Network Traning**
+
+**A2: Object Detection**
+- Data Preparation: Begins by unzipping and loading image data with annotations in COCO format (finished on Label Studio). The data is then converted into a format readable by Hugging Face's DatasetDict for object detection.
+- Dataset Organization: The images and metadata (annotations) are organized into the correct folder structure for object detection. Unique category IDs are collected from the annotations to create id2label and label2id mappings.
+- Model Preparation: The DETR (Detection Transformer) model is initialized from a pre-trained checkpoint (facebook/detr-resnet-50). An AutoImageProcessor is used to preprocess the images for the model.
+- Training: The model is trained on the prepared dataset with specific training arguments such as batch size, number of epochs, learning rate, etc. The training progress is tracked and logged.
+- Evaluation: After training, the model is evaluated on a test dataset to measure its performance using metrics like Average Precision (AP) and Average Recall (AR) at different IoU thresholds.
+- Inference & Visualization: The trained model is used to make predictions on new images, detecting objects and displaying bounding boxes and labels. A function is also provided to count specific objects in an image.
+
+**A3: Anomaly Detection**
